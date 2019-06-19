@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout Demo</title>
+    <link rel="animate.css" href="css/animate.css">
+    <style>
+        .grid_site {
+            display: grid;
+            grid-gap: 15px;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 8vh 77vh 8vh;
+            grid-template-areas:
+            "h h h h h h h h h h h h"
+            "s s s s s c c c c c c c"
+            "f f f f f f f f f f f f";
+        }
+
+        .header, .footer, aside, .content {
+            text-transform: uppercase;
+            color: white;
+            box-sizing: border-box;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header {
+            background-color: deeppink;
+            /*grid-column: 1/-1;*/
+            grid-area:h;
+        }
+
+        @media screen and (max-width: 900px) {
+            .grid_site {
+                grid-template-areas:
+                        "h h h h h h h h h h h h"
+                        "c c c c c c c c c c c c"
+                        "s s s s s f f f f f f f";
+            }
+        }
+
+        .aside {
+            background-color: black;
+            /*grid-column: 1/5;*/
+            grid-area:s;
+        }
+
+        .content {
+            background-color: black;
+            /*grid-column: 5/-1;*/
+            grid-area:c;
+        }
+
+        .footer {
+            background-color: deeppink;
+            /*grid-column: 1/-1;*/
+            grid-area:f;
+        }
+    </style>
+    <link rel="stylesheet" href="css/animate.css">
+</head>
+<body>
+    <div class="grid_site">
+        <header class="header animated delay-1s fadeInDownBig">header</header>
+        <aside class="aside animated fadeInLeft delay-2s">aside</aside>
+        <section class="content animated fadeInRight delay-3s">content</section>
+        <footer class="footer animated fadeInUp delay-4s">footer</footer>
+    </div>
+</body>
+</html>

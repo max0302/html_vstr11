@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid Demo</title>
+    <style>
+        body {
+            background-color: lightgreen;
+        }
+
+        .grid_item {
+            background-color: deeppink;
+            padding: 30px;
+            color: white;
+            text-align: center;
+        }
+
+        .grid_item:nth-of-type(odd) {
+            background-color: black;
+        }
+
+        .grid_container {
+            display: grid;
+            /*grid-template-columns: 300px 300px 300px;*/
+            /*grid-template-columns:30% 30% 30%;*/
+            /*grid-template-columns: 1fr 1fr 3fr;*/
+            /*grid-template-columns: 150px repeat(3, 1fr) 150px;*/
+            grid-template-columns: minmax(300px, 1fr) 1fr 1fr;
+            /*grid-column-gap: 15px;*/
+            /*grid-row-gap: 15px;*/
+            grid-template-rows: 300px 300px;
+            grid-gap: 15px;
+            justify-items: center;
+            align-items: center;
+        }
+        .grid_item:nth-child(1) {
+            /*grid-column-start: 1;*/
+            /*grid-column-end:4;*/
+            grid-column: 1/-1;
+            /*grid-row-start: 1;*/
+            /*grid-row-end: 3;*/
+            /*grid-row: 1/3;*/
+            justify-self: start;
+            align-self: end;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid_container">
+        <div class="grid_item">1</div>
+        <div class="grid_item">2</div>
+        <div class="grid_item">3</div>
+        <div class="grid_item">4</div>
+        <div class="grid_item">5</div>
+        <div class="grid_item">6</div>
+    </div>
+</body>
+</html>

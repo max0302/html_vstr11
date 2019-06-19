@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Picture 2</title>
+    <style>
+        .grid_site {
+            background-color: white;
+            display: grid;
+            grid-gap: 2px;
+            grid-template-columns: repeat(9, 1fr);
+            grid-template-rows: repeat(3, 33vh);
+            grid-template-areas:
+                    "p7 p8 p9 p9 p9 p9 p10 p10 p10"
+                    "p7 p8 p9 p9 p9 p9 p10 p10 p10"
+                    "p11 p12 p12 p13 p13 p13 p14 p14 p14";
+        }
+
+        .pict7 {
+            grid-area: p7;
+            background-image: url("images/pict7.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .pict8 {
+            grid-area: p8;
+            background-image: url("images/pict8.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .pict9 {
+            grid-area: p9;
+            background-image: url("images/pict9.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .pict10 {
+            grid-area: p10;
+            background-image: url("images/pict10.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .pict11 {
+            grid-area: p11;
+            background-image: url("images/pict11.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .pict12 {
+            grid-area: p12;
+            background-image: url("images/pict12.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .pict13 {
+            grid-area: p13;
+            background-image: url("images/pict13.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .pict14 {
+            grid-area: p14;
+            background-image: url("images/pict14.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid_site">
+        <section class="pict7"></section>
+        <section class="pict8"></section>
+        <section class="pict9"></section>
+        <section class="pict10"></section>
+        <section class="pict11"></section>
+        <section class="pict12"></section>
+        <section class="pict13"></section>
+        <section class="pict14"></section>
+    </div>
+</body>
+</html>
